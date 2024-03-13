@@ -1,0 +1,163 @@
+{
+  "info": {
+    "_postman_id": "e7f6f5f6-c236-4f78-904e-897fdc30cc3c",
+    "name": "Apparels",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5346643"
+  },
+  "item": [
+    {
+      "name": "Update Apparel",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantity\": 20,\n    \"price\": 85\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9000/update-apparel/0dj1czoq81e2yel2pj8s/medium",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["update-apparel", "0dj1czoq81e2yel2pj8s", "medium"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Apparel",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Checked Shirt Green\",\n    \"sizes\": {\n        \"small\": {\n            \"quantity\": 10,\n            \"price\": 89\n        },\n        \"medium\": {\n            \"quantity\": 20,\n            \"price\": 89\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9000/create-apparel",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["create-apparel"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Multiple Apparels",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[{\n    \"uCode\": \"0dj1czoq81e2yel2pj8s\",\n    \"size\": \"small\",\n    \"quantity\": 20,\n    \"price\": 89\n},{\n    \"uCode\": \"j2zy29d7qnvkszmhm34d\",\n    \"size\": \"medium\",\n    \"quantity\": 25,\n    \"price\": 89\n}]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9000/update-apparels",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["update-apparels"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validate Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[{\n    \"uCode\": \"j2zy29d7qnvkszmhm34d\",\n    \"size\": \"small\",\n    \"quantity\": 18\n},{\n    \"uCode\": \"j2zy29d7qnvkszmhm34d\",\n    \"size\": \"medium\",\n    \"quantity\": 15\n}]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9000/validate-order",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["validate-order"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Min Price",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9000/get-min-price",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9000",
+          "path": ["get-min-price"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
