@@ -21,6 +21,8 @@ npm run test
 Open your local browser and verify the sample-node-api is working by accessing:  
 `http://localhost:9000/`
 
+Stackblitz: https://stackblitz.com/~/github.com/sumy77/apparel-backend
+
 **Note**  
 The `node_modules` folder will not be transferred, we can do npm install later on remote server itself to pull down required node packages. Node version used to build this application is node v20.2.0.
 
