@@ -30,10 +30,7 @@ export const createApparel = (req: Request, res: Response): void => {
   }
 };
 
-export const updateApparel = (
-  req: Request,
-  res: Response,
-): Response | undefined => {
+export const updateApparel = (req: Request, res: Response): Response => {
   try {
     const { uCode, size } = req.params;
     const apparelToUpdate = db.get(uCode);
@@ -51,14 +48,11 @@ export const updateApparel = (
       result: apparelToUpdate,
     });
   } catch (e) {
-    res.status(500).send({ error: "Internal Server Error" });
+    return res.status(500).send({ error: "Internal Server Error" });
   }
 };
 
-export const updateApparels = (
-  req: Request,
-  res: Response,
-): Response | undefined => {
+export const updateApparels = (req: Request, res: Response): Response => {
   try {
     for (const i in req.body) {
       const obj: BulkApparelT = req.body[i];
@@ -78,14 +72,11 @@ export const updateApparels = (
     }
     return res.send({ message: "Apparels updated sucessfully" });
   } catch (e) {
-    res.status(500).send({ error: "Internal Server Error" });
+    return res.status(500).send({ error: "Internal Server Error" });
   }
 };
 
-export const validateOrder = (
-  req: Request,
-  res: Response,
-): Response | undefined => {
+export const validateOrder = (req: Request, res: Response): Response => {
   try {
     for (const i in req.body) {
       const obj: ValidateApparelT = req.body[i];
@@ -110,14 +101,11 @@ export const validateOrder = (
     }
     return res.send({ message: "Order fulfilled" });
   } catch (e) {
-    res.status(500).send({ error: "Internal Server Error" });
+    return res.status(500).send({ error: "Internal Server Error" });
   }
 };
 
-export const getMinPrice = (
-  req: Request,
-  res: Response,
-): Response | undefined => {
+export const getMinPrice = (req: Request, res: Response): Response => {
   try {
     const data = db.JSON();
     if (_.isEmpty(data)) {
@@ -141,6 +129,6 @@ export const getMinPrice = (
       result: minPrice,
     });
   } catch (e) {
-    res.status(500).send({ message: "Internal Server Error" });
+    return res.status(500).send({ message: "Internal Server Error" });
   }
 };

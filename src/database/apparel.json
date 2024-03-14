@@ -1,34 +1,32 @@
 {
-    "nfq7onutbqwptnslokrf": {
-        "title": "New Apparel1",
-        "uCode": "nfq7onutbqwptnslokrf",
-        "sizes": {
-            "small": {
-                "quantity": 10,
-                "price": 99
-            },
-            "medium": {
-                "quantity": 10,
-                "price": 99
-            }
-        },
-        "createdAt": "2024-03-13T14:33:07.850Z",
-        "updatedAt": null
-    },
-    "bi10mi9n3cv0j44ijkf9": {
-        "title": "New Apparel2",
-        "uCode": "bi10mi9n3cv0j44ijkf9",
-        "sizes": {
-            "small": {
-                "quantity": 20,
-                "price": 89
-            },
-            "medium": {
-                "quantity": 15,
-                "price": 69
-            }
-        },
-        "createdAt": "2024-03-13T14:33:28.772Z",
-        "updatedAt": "2024-03-14T05:10:40.827Z"
+  "nfq7onutbqwptnslokrf": {
+    "title": "New Apparel1",
+    "uCode": "nfq7onutbqwptnslokrf",
+    "sizes": {
+      "small": {
+        "quantity": 10,
+        "price": 99
+      },
+      "medium": {
+        "quantity": 10,
+        "price": 99
+      }
     }
+  },
+  "bi10mi9n3cv0j44ijkf9": {
+    "title": "New Apparel2",
+    "uCode": "bi10mi9n3cv0j44ijkf9",
+    "sizes": {
+      "small": {
+        "quantity": 20,
+        "price": 89
+      },
+      "medium": {
+        "quantity": 15,
+        "price": 69
+      }
+    },
+    "createdAt": "2024-03-13T14:33:28.772Z",
+    "updatedAt": "2024-03-14T05:10:40.827Z"
+  }
 }
